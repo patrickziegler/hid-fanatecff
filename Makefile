@@ -11,6 +11,7 @@ clean:
 	@echo -e "\n::\033[32m Cleaning Fanatec kernel module\033[0m"
 	@echo "========================================"
 	$(MAKE) -C $(KERNEL_SRC) M=$$PWD clean
+	$(RM) modules.livepatch
 
 install:
 	@echo -e "\n::\033[34m Installing Fanatec kernel module/udev rule\033[0m"
